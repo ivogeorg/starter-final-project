@@ -30,7 +30,7 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
    5. Write a program that does the calibration programmatically:
       1. When the program starts, it prompts the user to take three readings of the low and three readings of the high values of the range. It starts by showing the South icon image to prompt the user to take a low value, and records it. Then, it shows the North icon image to prompt the user to take a high value, and records it. It repeats this two more times, for a total of 3 readings for each.
       2. It takes the average of the low values and sets the range minimum to that value. It does the same for the range maximum.
-      3. It performs the mapping, exits the calibration subprogram, and continues normal operation described in the previous task.
+      3. It performs the mapping, exits the calibration subprogram, scrolls "Calibration success" once, and starts normal operation described in the previous task.
    6. Commit the JavaScript file to your assignment repository, calling it `auto-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
 3. Tag:
    1. When done with Week 12, including the videos and writeups in [README.md](README.md), tag the repository with the tag "FP-Week-12".
