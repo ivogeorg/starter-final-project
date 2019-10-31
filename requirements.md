@@ -37,7 +37,7 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
    
 #### Week 13 - Oscilloscopes and I2C
    
-TODO   
+TODO
 
 #### Week 14 - Makecode packages
    
@@ -58,6 +58,12 @@ TODO
 ### Sensors
 
 1. SparkFun soil moisture sensor [hookup guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide). _Note: For Arduino._
+
+### Oscilloscopes
+
+1. Oscilloscopes made easy [Part 1](https://www.youtube.com/watch?v=uU3FhH7_MWo), [Part 2](https://www.youtube.com/watch?v=5VyotIVwRiA).
+2. Rigol 1000 Series oscilloscopes [documentation](https://www.rigolna.com/products/digital-oscilloscopes/1000z/).
+
 
 ### Github
 
