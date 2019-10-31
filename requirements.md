@@ -20,39 +20,28 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
    3. Now that you have a 5x5 LED matrix and 3 external LEDs, extend your favorite screensaver program to include the external LEDs into the changing pattern. Do something interesting. Commit the JavaScript file to your assignment repository, calling it `twenty-eight.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
 2. Soil sensor:
    1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
-   2. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. 
+   2. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. Pick a GPIO pin, configure it as digital output, and wire VCC to it. Pick a GPIO pin, configure it as analog in, and wire SIG to it. GND whould be wired to ground on the micro:bit.
+   3. Write a program that:
+      1. Reads the sensor input in a loop with pauses to get the reading.
+		2. It only powers the sensor when it takes a reading, by writing a 1 and then a 0 to the digital output pin. **Do not hook up the VCC on the sensor to a constant 3.3V or leave the digital pin to 1 when you are not taking a reading. This degrades the sensor quickly! **
+		3. Maps the range of input values of the sensor (you need to measure them yourself) to the range 0-4. Use the [`map`](https://makecode.microbit.org/reference/pins/map) function. This is called _calibration_ of the sensor. For the minimum value, take a reading with a dry sensor not touching anything; for the maximum value, take a reading with the sensor prongs dipped in shallow water. **Do not immerse the whole sensor in water!**
+		4. When it takes a sensor reading, it lights up as many rows of the LED matrix as correspond to the rescaled magnitude of the reading.
+   4. Commit the JavaScript file to your assignment repository, calling it `manual-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+   5. Write a program that does the calibration programmatically:
+      1. When the program starts, it prompts the user to take three readings of the low and three readings of the high values of the range. It starts by showing the South icon image to prompt the user to take a low value, and records it. Then, it shows the North icon image to prompt the user to take a high value, and records it. It repeats this two more times, for a total of 3 readings for each.
+      2. It takes the average of the low values and sets the range minimum to that value. It does the same for the range maximum.
+      3. It performs the mapping, exits the calibration subprogram, and continues normal operation described in the previous task.
+   6. Commit the JavaScript file to your assignment repository, calling it `auto-calibration.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+3. Tag:
+   1. When done with Week 12, including the videos and writeups in [README.md](README.md), tag the repository with the tag "FP-Week-12".
+   
+#### Week 13 - Oscilloscopes and I2C
+   
+TODO   
 
-#### 2.3 Videos of operation
-
-1. For each programming file, record a short video of the LED operation. Upload to [Imgur](https://imgur.com/).
-
-2. **(Bonus)** Make one video out of the different clips and upload to [Imgur](https://imgur.com/).
-
-### 3. Criteira for micro:bit JS programs
-
-#### 3.1 Requirements
-1. The file should have a name and the `.js` file extension.
-2. A project [description](#description) should be included in this [README](README.md) file, and a leading comment in the JS file.
-
-#### 3.2 Code quality
-1. The program should have proper indentation.
-2. Every block of code should contain inline comments, briefly describing its purpose and functionality.	
-3. The program should have good structure, with asynchronous and synchronous code blocks properly differentiated. **Note:** You cannot have more than one `forever` loop.
-4. Variables should be named in either of the following styles:
-   1. `variable_name_of_underscore_delimited_lower_case_words`, or
-   2. `variableNameInCamelCase`
-
-#### 3.3 JavaScript
-1. Variables should be declared with [full static data types](https://makecode.microbit.org/javascript/types).	
-2. Programmatic functionality should be encapsulated in [functions](https://makecode.microbit.org/javascript/functions), and, optionally for **bonus** points, [classes](https://makecode.microbit.org/javascript/classes).	
-3. Functions in JavaScript are [1st class objects](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function). All event constructs like `onButtonPressed` and `onGesture` take functions as arguments.	
-4. A maximum variety of JS language constructs (loops, conditionals, various operators, encapsulations, event handling, etc) should be used.
-
-#### 3.4 micro:bit			
-1. Use of buttons	and/or guestures.
-2. Sensible display update.
-3. Non-trivial functionality.	
-4. Control complexity.
+#### Week 14 - Makecode packages
+   
+TODO   
 
 ## Resources
 
@@ -92,3 +81,4 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 5. A pretty good and very palatable JS tutorial with in-browser coding, by [Codecademy](https://www.codecademy.com/learn/introduction-to-javascript).
 6. Extensive and detailed [JS tutorial](https://javascript.info/), with some advanced material thrown in. _**I like this one!**_
 7. The most authoritative JS resource on the Web, including tutorials and reference, by [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+8. micro:bit [reference](https://makecode.microbit.org/reference/), especially [GPIO pins](https://makecode.microbit.org/reference/pins).
