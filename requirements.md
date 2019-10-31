@@ -12,16 +12,15 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 
 ### 2. Requirements
 
-#### 2.1 Analog output pin
+#### Week 12 - micro:bit I/O
 
-1. Start with this SparkFun [breakout board hookup guide](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide). Build the circuit, using 3 LEDs of different colors. Remember the proper orientation of the LEDs (long leg toward higher voltage). Commit the JavaScript file to your assignment repository. Call it `original.js`. _Notice that you have to disable the on-board LEDs to work with the external pins (see the documentation for the [GPIO edge connector](https://tech.microbit.org/hardware/edgeconnector/)._
-2. Modify the program to do something interesting with the 3 LEDs. Commit the modified JavaScript file to your assignment repository. Call it `new-program.js`.
-3. **(Bonus)** Add more analog output LEDs and write a new program to drive them in an interesting way. Commit the modified JavaScript file to your assignment repository. Call it `more-leds.js`.
-
-#### 2.2 Digital input pin
-
-1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). Commit the modified JavaScript file to your assignment repository. Call it `digital-in.js`. Do you need a [_pullup resistor_](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?
-2. **(Bonus)** Try to drive one of the internal LEDs **and** the external LED on the analog output pin **at the same time**. Commit the modified JavaScript file to your assignment repository. Call it `on-board-and-external-out.js`.
+1. LEDs:
+   1. Follow the instructions in the SparkFun [micro:bit breakout board hookup guide](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide). Build the circuit, using 3 LEDs of different colors. Remember the proper orientation of the LEDs (long leg toward higher voltage). Commit the JavaScript file to your assignment repository, calling it `original-guide.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+   2. Reconfigure the circuit and rewrite the program to avoid disabling the LED matrix. Choose the correct 3 pins from the [micro:bit GPIO function table](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide#hardware-overview). Add code to demonstrate that the LED matrix is enabled. Commit the JavaScript file to your assignment repository, calling it `enable-matrix.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+   3. Now that you have a 5x5 LED matrix and 3 external LEDs, extend your favorite screensaver program to include the external LEDs into the changing pattern. Do something interesting. Commit the JavaScript file to your assignment repository, calling it `twenty-eight.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+2. Soil sensor:
+   1. Keeping at least one analog output pin, open a digital input pin and hook it up to a TTL input button on the workstation. Light the external LED when you detect a 1 on the input button (that is, the button is _pressed_). _Note: Do you need an external or internal [pullup resistor](https://www.google.com/search?q=pullup+pulldown+resistor&oq=pullup+pull)?_ Commit the JavaScript file to your assignment repository, calling it `digital-in.js`. Build the circuit and take a short video of its operation. Do a short writeup in [README.md](README.md) and include a link to the video.
+   2. Hook up the soil moisture sensor. There are three wires coming out: VCC, GND, and SIG. 
 
 #### 2.3 Videos of operation
 
@@ -65,6 +64,11 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 4. The assembled micro:bit resources at the [awesome micro:bit list](https://github.com/carlosperate/awesome-microbit).
 5. micro:bit [reference](https://makecode.microbit.org/reference), and specifically the [pins](https://makecode.microbit.org/reference/pins) section.
 6. The technical documentation for the micro:bit [GPIO edge connector](https://tech.microbit.org/hardware/edgeconnector/).
+7. SparkFun [micro:bit breadboard bridge hookup guide](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide) (contains micro:bit GPIO pin function [table](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide#hardware-overview)).
+
+### Sensors
+
+1. SparkFun soil moisture sensor [hookup guide](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide). _Note: For Arduino._
 
 ### Github
 
@@ -88,9 +92,3 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 5. A pretty good and very palatable JS tutorial with in-browser coding, by [Codecademy](https://www.codecademy.com/learn/introduction-to-javascript).
 6. Extensive and detailed [JS tutorial](https://javascript.info/), with some advanced material thrown in. _**I like this one!**_
 7. The most authoritative JS resource on the Web, including tutorials and reference, by [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
-
----
-
-### Description
-
-TODO: Your project description, in your own words. _Clarity and grammatical correctness are required._
