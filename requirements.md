@@ -54,7 +54,7 @@ TODO
 3. A list of some more [advanced projects](https://www.itpro.co.uk/desktop-hardware/26289/13-top-bbc-micro-bit-projects).
 4. The assembled micro:bit resources at the [awesome micro:bit list](https://github.com/carlosperate/awesome-microbit).
 5. micro:bit [reference](https://makecode.microbit.org/reference), and specifically the [pins](https://makecode.microbit.org/reference/pins) section.
-6. The technical documentation for the micro:bit [GPIO edge connector](https://tech.microbit.org/hardware/edgeconnector/).
+6. The technical documentation for the micro:bit [GPIO edge connector](https://tech.microbit.org/hardware/edgeconnector/) and [pins](https://makecode.microbit.org/device/pins).
 7. SparkFun [micro:bit breadboard bridge hookup guide](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide) (contains micro:bit GPIO pin function [table](https://learn.sparkfun.com/tutorials/microbit-breakout-board-hookup-guide#hardware-overview)).
 
 ### Sensors
