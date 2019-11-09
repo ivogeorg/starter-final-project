@@ -37,9 +37,16 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 3. Tag:
    1. When done with Week 12, including the videos and writeups in [README.md](README.md), tag the repository with the tag "FP-Week-12".
    
-#### Week 13 - Oscilloscopes and I2C
+#### Week 13 - Oscilloscopes and serial protocols
    
-TODO
+1. Watch the first 4 oscilloscope videos referenced [below](#oscilloscopes).
+2. Take a look at the Rigol 1000 Series oscilloscopes documentation site to see what resources you have in case you need mmore in-depth knowledge.
+3. The oscilloscope shows _continuous varying signals_ that it detects at the tips of its _probes_. The probe has a two wires: _signal_ (red or central probe), and _ground_ (black or outside wire). _Remember that voltage is a **relative** potential, so, unless you connect the ground, which serves as the **reference level**, you will get garbage._
+4. Connect a probe to Channel 1.
+5. Visualize the following signals, using the **Auto** regime and default settings (trigger on a rising edge on CH1). For each signal, take a **video** of the setup (the source wire and connection of the oscilloscope probe) and the display of the oscilloscope, while varying one of the signal properties (wave shape, frequency, amplitude) using the controls of the source. Write up one sentence in the [README](README.md), enough to be able to insert a link to the video. Signals:
+   1. Configure the **OUT** of the built-in function generator on the workstation with whatever function you want. _Remember that we used it to drive external LEDs._
+   2. Fire up the standalone Rigol function generator. It is right beneath the multimeter. Connect a probe. _Notice that the function generator probes also have two wires._ Connect it properly to the oscilloscope probe. Repeat the previous task with this new source.
+   3. Write a small program, where, in a loop, you configure a pin to emit PWM pulses
 
 #### Week 14 - Makecode packages
    
@@ -64,7 +71,8 @@ TODO
 ### Oscilloscopes
 
 1. Oscilloscopes made easy [Part 1](https://www.youtube.com/watch?v=uU3FhH7_MWo), [Part 2](https://www.youtube.com/watch?v=5VyotIVwRiA).
-2. Rigol 1000 Series oscilloscopes [documentation](https://www.rigolna.com/products/digital-oscilloscopes/1000z/).
+2. Oscilloscope tutorials [SparkFun](https://www.youtube.com/watch?v=u4zyptPLlJI), [Martin Lorton](https://www.youtube.com/watch?v=CzY2abWCVTY).
+3. Rigol 1000 Series oscilloscopes [documentation](https://www.rigolna.com/products/digital-oscilloscopes/1000z/).
 
 
 ### Github
