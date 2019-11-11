@@ -53,7 +53,7 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
       4. To repeat the task from (1), you need a loop for your program in (3). Write a loop that varies the duty cycle, up and down, between 5% and 95%, in steps of 5%. _Note: Here, you need to read on the oscilloscope what the period of the base wave is, to calculate the duty cycles. Include the period and the pulse widths for the highest and lowest duty cycle in your short writeup._
    2. Explore the _other_ servo function, using the oscilloscope. Once you figure it out, write a small program to demo the operation, and record the video. _You might or might not need to use the **Single** mode of the oscilloscope._
 3. I2C warmup:
-   1. Read the SparkFun tutorial on [I2C](https://learn.sparkfun.com/tutorials/i2c).
+   1. Read the SparkFun [I2C tutorial](https://learn.sparkfun.com/tutorials/i2c).
    2. In a small writeup in the [README](README.md), answer the following questions:
       1. What are the disadvantages of the other two serial communication channels, UART and SPI, and how does I2C improve on them?
       2. I2C is a two-wire serial communication channel. What are the two wires, SDA and SCL?
@@ -65,9 +65,9 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
    1. In a loop, configure the micro:bit to write a number to some arbitrary I2C address. The address can be arbitrary. Capture an I2C frame on the oscilloscope. _Note that I2C has 2 wires, so you will need 2 probes, and set the correct trigger on the correct channel._ Use the **Single** mode on the oscillocope. Take a picture of your setup and a picture of the oscilloscope display. In the writeup, analyze what you have captured:
       1. What frame did you capture?
       2. What does the I2C write function do when there is nothing connected?
-      3. Is there a difference in what you capture if you write a number to one of the internal device addresses? _(The accelerometer and magentometer (compass) are connected to the I2C bus on the micro:bit PCB. Their addresses can be found [here](https://tech.microbit.org/hardware/i2c/).)
+      3. Is there a difference in what you capture if you write a number to one of the internal device addresses? _(The accelerometer and magentometer (compass) are connected to the I2C bus on the micro:bit PCB. Their addresses can be found [here](https://tech.microbit.org/hardware/i2c/).)_
    2. Write a short program to read a number from the I2C devices on the micro:bit. For each device:
-      1. Try all three addresses. (Bonus for a cogent argument about why there are three.)
+      1. Try all three addresses. (**Bonus** for a cogent argument about why there are three.)
       2. Try signed and unsigned single bype integers.
       3. Scroll the values on the LED matrix. 
       4. What values do you read?
@@ -75,7 +75,7 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
 5. **(Advanced, optional, and bonus)** Simple pulse-based protocol:
    1. Program one micro:bit to emit pulse-based patterns by driving a digital output pin. Use a 50% duty cycle. Start with the 11111 pattern.
    2. Program another micro:bit to detect the pattern by listening on an digital input pin. Play with the `bits.onPulsed()` and `bits.pulseDuration()` functions.
-   3. Generate and capture any 5-bit patterns. _How will you deal with the patterns that start with the same value as your protocol line (that is, if your line is high by default, how will you deal with patterns that start with 1, and vice versa)_ Devise a demo that shows this capability on a video. You may use the LED matrix to show the sent and received patterns.
+   3. Generate and capture all 5-bit patterns. _How will you deal with the patterns that start with the same value as your protocol line (that is, if your line is high by default, how will you deal with patterns that start with 1, and if you line is low by default, how will you deal with patterns that start with 0)?_ Devise a demo that shows this capability on a video. You may use the LED matrix to show the sent and received patterns, for comparison.
       
 #### Week 14 - I2C sensors & Makecode packages
    
