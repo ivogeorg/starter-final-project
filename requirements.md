@@ -67,7 +67,7 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
       2. What does the I2C write function do when there is nothing connected?
       3. Is there a difference in what you capture if you write a number to one of the internal device addresses? _(The accelerometer and magentometer (compass) are connected to the I2C bus on the micro:bit PCB. Their addresses can be found [here](https://tech.microbit.org/hardware/i2c/).)_
    2. Write a short program to read a number from the I2C devices on the micro:bit. For each device:
-      1. Find the appropriate [I2C address](https://tech.microbit.org/hardware/i2c/) for the device you want to read from. What are the three numbers? Which one should you use? (**Bonus** for a cogent argument about why there are three numbers. Hint: Write them in binary and compare!)
+      1. Find the appropriate [I2C address](https://tech.microbit.org/hardware/i2c/) for the device you want to read from. What are the three numbers? Which one should you use in `function i2cReadNumber(address: number, format: NumberFormat, repeated?: boolean): number;`? (**Bonus** for a cogent argument about why there are three numbers. Hint: Write them in binary and compare!)
       2. Try signed and unsigned single bype integers.
       3. Scroll the values on the LED matrix. 
       4. What values do you read?
