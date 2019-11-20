@@ -67,13 +67,13 @@ The file [criteria.md](criteria.md) contains the criteria for passing.
       2. What does the I2C write function do when there is nothing connected?
       3. Is there a difference in what you capture if you write a number to one of the internal device addresses? _(The accelerometer and magentometer (compass) are connected to the I2C bus on the micro:bit PCB. Their addresses can be found [here](https://tech.microbit.org/hardware/i2c/).)_
    2. Write a short program to read a number from the I2C devices on the micro:bit. For each device:
-      1. Try all three addresses. (**Bonus** for a cogent argument about why there are three.)
+      1. Find the appropriate [I2C address](https://tech.microbit.org/hardware/i2c/) for the device you want to read from. What are the three numbers? Which one should you use? (**Bonus** for a cogent argument about why there are three numbers. Hint: Write them in binary and compare!)
       2. Try signed and unsigned single bype integers.
       3. Scroll the values on the LED matrix. 
       4. What values do you read?
       5. Can you get different values by moving the micro:bit around.
 5. **(Advanced, optional, and bonus)** Simple pulse-based protocol:
-   1. Program one micro:bit to emit pulse-based patterns by driving a digital output pin. Use a 50% duty cycle. Start with the 11111 pattern.
+   1. Program one micro:bit to emit pulse-based patterns by driving a digital output pin. Use a 50% duty cycle. Start with the 11111<sub>2</sub> pattern.
    2. Program another micro:bit to detect the pattern by listening on an digital input pin. Play with the `bits.onPulsed()` and `bits.pulseDuration()` functions.
    3. Generate and capture all 5-bit patterns. _How will you deal with the patterns that start with the same value as your protocol line (that is, if your line is high by default, how will you deal with patterns that start with 1, and if you line is low by default, how will you deal with patterns that start with 0)?_ Devise a demo that shows this capability on a video. You may use the LED matrix to show the sent and received patterns, for comparison.
       
